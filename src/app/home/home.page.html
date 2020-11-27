@@ -1,4 +1,4 @@
-<ion-menu side="end" menuId="first" contentId="main">
+<ion-menu side="end" menuId="first" content-id="main">
   <ion-header>
     <ion-toolbar translucent>
       <ion-title>Menu</ion-title>
@@ -28,13 +28,47 @@
   </ion-content>
 </ion-menu>
 
+<!-- END OF MENU -->
+
+<ion-menu side="start" menuId="second" content-id="main">
+  <ion-header>
+    <ion-toolbar translucent>
+      <ion-title>Goals</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-label>Goal 1</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Goal 2</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Goal 3</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Goal 4</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Goal 5</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Goal 6</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<!-- END OF GOAL SELECT MENU -->
+
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot="start"><ion-button>Goals</ion-button></ion-buttons>
+    <ion-buttons slot="start"><ion-menu-button menu="start"></ion-menu-button></ion-buttons>
     <ion-title>
       Test
     </ion-title>
-    <ion-buttons slot="end"><ion-menu-button></ion-menu-button></ion-buttons>
+    <ion-buttons slot="end"><ion-menu-button menu="end"></ion-menu-button></ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -58,5 +92,6 @@
 
   </div>
 </ion-content>
+
 
 <ion-router-outlet id="main"></ion-router-outlet>
